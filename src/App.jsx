@@ -1,9 +1,13 @@
-import "./App.css";
+import NewProject from "./components/NewProject";
+import ProjectSidebar from "./components/ProjectSidebar";
 
 function App() {
   return (
     <>
-      <h1>Welcome to React Project</h1>
+      <main className="h-screen flex gap-8">
+        <ProjectSidebar />
+        <NewProject />
+      </main>
     </>
   );
 }
