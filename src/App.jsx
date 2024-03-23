@@ -12,18 +12,16 @@ function App() {
     tasks: [],
   });
 
-  function handleAddTask(text) {
+  function handleAddTask(textData) {
     setProjectsState((prevState) => {
-      const taskId = Math.random();
       const newTask = {
-        text: text,
-        projectId: prevState.selectedProjectId,
-        id: taskId,
+        ...textData,
+        id: Math.random(),
       };
 
       return {
         ...prevState,
-        tasks: [newTask, ...prevState.tasks],
+        tasks: [...prevState.tasks, newTask],
       };
     });
   }
